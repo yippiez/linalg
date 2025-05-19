@@ -32,11 +32,11 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/example/linalg"
-"Bug Tracker" = "https://github.com/example/linalg/issues"
-"Source Code" = "https://github.com/example/linalg"
-"Documentation" = "https://linalg-calculator.readthedocs.io"
-"Changelog" = "https://github.com/example/linalg/blob/main/CHANGELOG.md"
+"Homepage" = "https://github.com/yippiez/linalg"
+"Bug Tracker" = "https://github.com/yippiez/linalg/issues"
+"Source Code" = "https://github.com/yippiez/linalg"
+"Documentation" = "https://github.com/yippiez/linalg/blob/main/README.md"
+"Changelog" = "https://github.com/yippiez/linalg/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [

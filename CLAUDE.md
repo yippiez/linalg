@@ -40,3 +40,6 @@ python -m linalg [arguments]
   - `formatter.py` - Result formatter
 - `tests/` - Test directory
   - `test_basic.py` - Basic functionality tests
+
+## CLI Utilities
+- Can use --prompt in linalg cli tool to get a description of the tool designed for llms
