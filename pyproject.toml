@@ -1,0 +1,75 @@
+[project]
+name = "linalg"
+version = "0.1.0"
+description = "Command-line calculator for linear algebra operations on NumPy arrays"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "linalg Contributors", email = "info@linalg-calculator.example.com"}
+]
+maintainers = [
+    {name = "linalg Maintainers", email = "info@linalg-calculator.example.com"}
+]
+keywords = ["linear-algebra", "numpy", "mathematics", "cli", "calculator"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "rich>=10.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/example/linalg"
+"Bug Tracker" = "https://github.com/example/linalg/issues"
+"Source Code" = "https://github.com/example/linalg"
+"Documentation" = "https://linalg-calculator.readthedocs.io"
+"Changelog" = "https://github.com/example/linalg/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "mypy>=1.0.0",
+    "ruff>=0.0.240",
+]
+docs = [
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+]
+
+[project.scripts]
+linalg = "linalg.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+pythonpath = ["."]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.ruff]
+target-version = "py38"
+line-length = 100
+select = ["E", "F", "B", "I"]
