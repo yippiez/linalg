@@ -56,7 +56,7 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--npy", "-n",
         action="store_true",
-        help="Use NPY format for output, useful for piping between linalg commands"
+        help="Use NPY format for output, writes binary data directly to stdout when piping between linalg commands"
     )
     
     parser.add_argument(
@@ -80,17 +80,6 @@ def create_parser() -> argparse.ArgumentParser:
         help="Use pretty table output with colors (overrides --format to 'table')"
     )
     
-    parser.add_argument(
-        "--binary-stdout",
-        action="store_true",
-        help="Write binary data directly to stdout (for piping npy files)"
-    )
-    
-    parser.add_argument(
-        "--info", "-i",
-        action="store_true",
-        help="Show information about matrices"
-    )
     
     parser.add_argument(
         "--verbose", "-v",
@@ -194,11 +183,11 @@ def main(args: Optional[List[str]] = None) -> int:
             format_type=format_type,
             precision=parsed_args.precision,
             threshold=parsed_args.threshold,
-            show_info=parsed_args.info,
+            show_info=False,  # --info option removed
             output_path=parsed_args.output,
             save_components=parsed_args.components,
             plain=use_plain,
-            write_to_stdout=(parsed_args.binary_stdout or (parsed_args.npy and format_type == 'npy'))
+            write_to_stdout=(parsed_args.npy and format_type == 'npy')
         )
         
         # Print or save the result

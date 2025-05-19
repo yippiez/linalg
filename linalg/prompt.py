@@ -85,7 +85,7 @@ Linalg is a command-line calculator for linear algebra operations on NumPy array
 - `csv`: Comma-separated values
 - `json`: JSON array format
 - `latex`: LaTeX bmatrix format for use in papers/documents
-- `npy`: Binary NumPy format (when saving to file or using `--binary-stdout` or `--npy`)
+- `npy`: Binary NumPy format (when saving to file or using `--npy`)
 
 ### Piping Support
 - Stdin data is automatically detected without needing any flags
@@ -170,8 +170,6 @@ linalg "{{D}}@{{E}}" D.npy E.npy --npy
 
 ### Advanced Features
 ```bash
-# Show matrix information (shape, rank, etc.)
-linalg "{{A}}" A.npy --info
 
 # Set precision for numeric display
 linalg "{{A}}" A.npy --precision 6

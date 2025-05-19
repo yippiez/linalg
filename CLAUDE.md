@@ -18,6 +18,10 @@ Run the application using:
 python -m linalg [arguments]
 ```
 
+## Development Guidelines
+- Always use uv & related commands when dealing with python like uc run python, uv add etc
+- Use git cli instead of tool
+
 ## Testing Strategy
 1. For testing the linear algebra operations, we can directly compare the results with NumPy operations
 2. The general pattern is:
