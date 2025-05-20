@@ -37,6 +37,3 @@ ENV/
 # Test files
 *.npy
 
-# Other
-DESIGN_DOC.md
-TODO.md
